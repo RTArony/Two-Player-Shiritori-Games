@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- css file -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Shiritori Games</title>
+    <link rel="shortcut icon" href="assets/shiritori_logo.png" type="image/x-icon">
+</head>
+<body class="bg-gray-200">
+    <header>
+        <nav class="flex items-center gap-3 ml-5 mt-2 mb-5">
+            <img class="w-[60px]" src="assets/shiritori_logo.png" alt="">
+            <h3 class="font-bold">Shiritori <br> Games</h3>
+        </nav>
+    </header>
+    <!-- popup window -->
+    <section>
+        <div id="myModal" class="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center">
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center w-80">
+                <h2 class="text-2xl font-bold mb-4">Game Over</h2>
+                <p class="text-4xl font-bold mb-6"><span id="player-no"></span> won the game!!!</p>
+                <button onclick="closeModal()" 
+                class="px-4 py-2 bg-blue-400 text-white rounded-lg hover:bg-blue-600 transition">
+                OK
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- player input  -->
+    <section class="max-w-[1000px] mx-auto text-center">
+        <h3 class="my-3 text-xl font-bold">Timer: <span id="timer">20</span></h3>
+        <div class="mb-5 text-lg text-red-700">
+            <h3>Only valid English word (No proper Noun)</h3>
+            <h3>must start with the last letter of your opponent's word</h3>
+            <h3>Minimum 4 letter word</h3>
+            <h3>Can not repeat your own word</h3>
+            <h3>The first player to reach 0 points wins the game.</h3>
+        </div>
+    </section>
+    <section class="flex max-w-[1000px] mx-auto justify-center gap-12">
+        <div class="p-3 rounded-xl shadow-lg bg-gray-100">
+            <h3 class="mb-3 font-semibold">Player 1 points: <span id="player1-score">100</span></h3>
+            <input id="player1-input" class="border p-2 mb-3" type="text" placeholder="Player 1 type here">
+            <div>
+                <h3 class="mb-3">You must start with: <span id="player-1 instruction" class="bg-red-200">Any letter</span> </h3>
+            </div>
+            <div id="player1-history">
+                <h3 class="mb-3 font-semibold">Your Word History:</h3>
+            </div>
+        </div>
+        <div class="p-3 rounded-xl shadow-lg bg-gray-100">
+            <h3 class="mb-3 font-semibold">Player 2 points: <span id="player2-score">100</span></h3>
+            <input id="player2-input" class="border p-2 mb-3" type="text" placeholder="Player 2 type here" disabled>
+            <div>
+                <h3 class="mb-3">You must start with: <span id="player-2 instruction" class="bg-red-200"></span> </h3>
+            </div>
+            <div id="player2-history">
+                <h3 class="mb-3 font-semibold">Your Word History:</h3>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

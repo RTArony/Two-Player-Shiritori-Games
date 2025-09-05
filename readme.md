@@ -9,6 +9,8 @@
 -  Countdown timer (20 seconds per turn)  
 -  Scoring system (point decreases based on remaining time)  
 -  Game Over modal when a player runs out of point & thus wins
+-  Responsive
+
 
 ## How to play:
 

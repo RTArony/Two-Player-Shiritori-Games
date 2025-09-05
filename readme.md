@@ -1,9 +1,25 @@
-This is a two player Shiritori Games allowing two players to play from the same screen
+## Two player Shiritori Games 
 
-The Game rules include:
+## Features:
 
-1. Players take turns entering words, where each new word must begin with the last letter 
-of the previous word. 
-2. Words cannot be repeated, and they must be valid English words. 
-3. Each word must contain at laest 4 letters.
-4. Points will be counted based on how much time is left on the timer. 
+-  Two-player turn-based gameplay  
+-  Word validation using [Dictionary API](https://dictionaryapi.dev/)  
+-  No duplicate words allowed  
+-  Minimum word length check (4 letters)  
+-  Countdown timer (20 seconds per turn)  
+-  Scoring system (point decreases based on remaining time)  
+-  Game Over modal when a player runs out of point & thus wins
+
+## How to play:
+
+1. Player 1 starts by typing a valid English word and pressing "Enter".  
+2. Player 2 must type a word that starts with the last letter of Player 1’s word.  
+3. Each valid word reduces the player’s point by the time left on the timer.If the timer goes in negative that will be added with the point. 
+4. If a player reaches a point of 0 then the game ends with a Game Over modal and that player wins. 
+
+## Tech Stack
+
+- HTML5
+- TailwindCSS & Vanilla CSS
+- Vanilla JavaScript
+- Dictionary API for word validation
